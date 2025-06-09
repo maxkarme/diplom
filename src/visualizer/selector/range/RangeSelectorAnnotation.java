@@ -1,7 +1,5 @@
 package visualizer.selector.range;
 
-import visualizer.selector.WithPriority;
-
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 

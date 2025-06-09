@@ -1,6 +1,5 @@
 package visualizer.selector.multi;
 
-import visualizer.StateComponent;
 import visualizer.selector.Selector;
 import visualizer.selector.multi.adapter.MultiSelectorAdapter;
 

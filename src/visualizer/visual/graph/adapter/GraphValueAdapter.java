@@ -1,9 +1,7 @@
 package visualizer.visual.graph.adapter;
 
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.List;
 
 public class GraphValueAdapter implements GraphAdapter {
     @Override
@@ -11,8 +9,8 @@ public class GraphValueAdapter implements GraphAdapter {
         try {
             ArrayList<Integer>[] value = (ArrayList<Integer>[])field.get(instance);
             int maxLength = value.length;
-            for(int i = 0; i < value.length; ++i) {
-                maxLength = Math.max(maxLength, value[i].size());
+            for (ArrayList<Integer> integers : value) {
+                maxLength = Math.max(maxLength, integers.size());
             }
 
             if(maxLength > 10000) {
@@ -29,8 +27,6 @@ public class GraphValueAdapter implements GraphAdapter {
     public ArrayList<Integer>[] getValue(Object object) {
         try {
             ArrayList<Integer>[] value = (ArrayList<Integer>[])object;
-
-
 
             return value;
         } catch(Exception err) {
